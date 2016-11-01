@@ -1,0 +1,32 @@
+<div>
+
+	第一个网页
+</div>
+
+<div>
+	<button class="btn btn-success" ng-click="ShowOrNot()">三级联动</button>
+	<select ng-if="provience" ng-change="showProvience(provienceName)" ng-model="provienceName">
+		<option ng-repeat="item in provience">{{item.name}}</option>
+	</select>
+	
+	<select ng-if="city" ng-change="showCity(cityName)" ng-model="cityName">
+		<option ng-repeat="item in city">{{item.name}}</option>
+	</select>
+</div>
+
+<!--<div>
+	<ul class="draglist">
+		<li ng-repeat="item in content" ng-drop="true" ng-drop-success="dropComplete($index,$data)">
+			<div ng-drag="true" ng-drag-data="item" draggable="false">姓名：{{item.name}}，年龄：{{item.age}}</div>
+		</li>
+	</ul>
+	<ul class="draglist">
+        <li ng-repeat="obj in draggableObjects" ng-drop="true" ng-drop-success="onDropComplete($index, $data,$event)">
+            <div ng-drag="true" ng-drag-data="obj">
+                {{obj.name}}
+            </div>
+        </li>
+    </ul>
+</div>-->
+
+
